@@ -4,7 +4,7 @@ Check out my article [Next Article Suggestion in Django](https://ianwaldron.com/
 
 ## Overview
 
-The "next_suggesion" Django model manager method produces a "suggestion" for what a user should read next depending upon the context of the article they're already reading.
+The "next_suggestion" Django model manager method produces a "suggestion" for what a user should read next depending upon the context of the article they're already reading.
 
 Specifically, the recommendation engine establishes context across three dimensions: category, tags, and recency.
 
@@ -72,7 +72,7 @@ python manage.py loaddata categories tags articles
 
 Note: the order the fixtures are in when they're loaded matters due to dependencies.
 
-## Get Suggesions (shell)
+## Get Suggestions (shell)
 
 Now you're able to test the suggestion engine in a shell environment.
 
@@ -81,7 +81,7 @@ python manage.py shell
 from core.models import Article
 ```
 
-Now let's get a suggestion. The method has a single positional argument for an article from which to make a suggesion.
+Now let's get a suggestion. The method has a single positional argument for an article from which to make a suggestion.
 
 ```shell
 article_1 = Article.objects.first()
