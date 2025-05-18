@@ -1,4 +1,5 @@
 from collections import defaultdict
+import random
 
 from django.db import models
 from django.core.exceptions import ImproperlyConfigured
@@ -55,4 +56,7 @@ class ArticleManager(models.Manager):
 
         # get group with most matching tags
         best_match = groups[max(groups.keys())]
-        return best_match[0]
+        # return best_match[0]
+
+        # select an article at random in "best_match" group
+        return random.choice(best_match)
